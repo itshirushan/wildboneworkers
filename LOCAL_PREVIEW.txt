@@ -1,0 +1,5 @@
+To preview locally:
+1. Open index.html in Chrome.
+2. The homepage/shop/about will use the stylesheet.
+3. Product pages use ../../assets/style.css.
+The hosted Cloudflare version will use the same site files.
