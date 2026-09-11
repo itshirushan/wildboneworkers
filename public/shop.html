@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shop All Specimens — Wild Bone Workers</title>
+<meta name="description" content="Browse the full Wild Bone Workers catalog — real skulls, bones, and preserved specimens, synced live from Etsy with current price and stock.">
+<link rel="canonical" href="/shop.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Shop All Specimens — Wild Bone Workers">
+<meta property="og:description" content="Browse the full catalog of ethically sourced skulls and bone specimens, synced live from Etsy.">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="utility-bar">Free shipping on every specimen &middot; Checkout securely on Etsy</div>
+<header class="site-header">
+  <div class="container">
+    <a href="/" class="wordmark">
+      <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <circle cx="24" cy="24" r="22" stroke="currentColor" stroke-width="1.4"/>
+        <path d="M24 12c-6.6 0-11 4.6-11 10.4 0 3.4 1.7 5.7 3.6 7.2v3.1c0 .9.7 1.6 1.6 1.6h1.1v-2.4h2v2.4h4.4v-2.4h2v2.4h1.1c.9 0 1.6-.7 1.6-1.6v-3.1c1.9-1.5 3.6-3.8 3.6-7.2C35 16.6 30.6 12 24 12z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/>
+        <circle cx="19.5" cy="22.5" r="2.1" stroke="currentColor" stroke-width="1.2"/>
+        <circle cx="28.5" cy="22.5" r="2.1" stroke="currentColor" stroke-width="1.2"/>
+        <path d="M23 24.5l-1 3h4l-1-3" stroke="currentColor" stroke-width="1.1" stroke-linejoin="round"/>
+      </svg>
+      <span>Wild Bone Workers</span>
+    </a>
+    <nav class="main-nav" aria-label="Primary">
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/shop.html" aria-current="page">Shop</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/shipping.html">Shipping</a></li>
+        <li><a href="/returns.html">Returns</a></li>
+      </ul>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+  </div>
+</header>
+<nav class="mobile-nav" id="mobileNav" aria-label="Mobile">
+  <a href="/">Home</a>
+  <a href="/shop.html">Shop</a>
+  <a href="/about.html">About</a>
+  <a href="/shipping.html">Shipping</a>
+  <a href="/returns.html">Returns</a>
+</nav>
+
+<main>
+  <div class="container">
+    <div class="section-head" style="margin-top:2rem;">
+      <h1 style="font-size:clamp(1.8rem,4vw,2.6rem);">Shop all specimens</h1>
+      <label for="sortSelect" class="visually-hidden">Sort</label>
+      <select id="sortSelect" class="sort-select">
+        <option value="recent">Most recent</option>
+        <option value="price_asc">Price: low to high</option>
+        <option value="price_desc">Price: high to low</option>
+      </select>
+    </div>
+
+    <button class="btn btn-outline filters-toggle" id="filtersToggle" aria-expanded="false" aria-controls="filtersPanel">Filter &amp; sort</button>
+
+    <div class="shop-layout">
+      <aside class="filters is-collapsed" id="filtersPanel">
+        <div class="filter-group">
+          <h3>Category</h3>
+          <div id="categoryFilters">
+            <label class="filter-option"><input type="radio" name="category" value="" checked> All specimens</label>
+          </div>
+        </div>
+        <div class="filter-group">
+          <h3>Price</h3>
+          <label class="filter-option"><input type="radio" name="price" value="" checked> Any price</label>
+          <label class="filter-option"><input type="radio" name="price" value="0-25"> Under $25</label>
+          <label class="filter-option"><input type="radio" name="price" value="25-100"> $25 to $100</label>
+          <label class="filter-option"><input type="radio" name="price" value="100-"> Over $100</label>
+        </div>
+        <div class="filter-group">
+          <h3>Availability</h3>
+          <label class="filter-option"><input type="checkbox" id="inStockOnly"> In stock only</label>
+        </div>
+        <div class="filter-group">
+          <label class="filter-option"><input type="search" id="searchInput" placeholder="Search specimens&hellip;" style="width:100%;padding:0.5rem;border:1px solid var(--ink);font-family:var(--font-body);"></label>
+        </div>
+      </aside>
+
+      <div>
+        <p id="resultCount" style="font-family:var(--font-tag);font-size:0.85rem;color:#55503f;margin-top:0;">Loading catalog&hellip;</p>
+        <div class="product-grid" id="shopGrid">
+          <div class="card card-skeleton"><div class="card-media"></div><div class="card-body"><div class="card-title">Loading&hellip;</div><div class="card-price">$00.00</div></div></div>
+          <div class="card card-skeleton"><div class="card-media"></div><div class="card-body"><div class="card-title">Loading&hellip;</div><div class="card-price">$00.00</div></div></div>
+          <div class="card card-skeleton"><div class="card-media"></div><div class="card-body"><div class="card-title">Loading&hellip;</div><div class="card-price">$00.00</div></div></div>
+          <div class="card card-skeleton"><div class="card-media"></div><div class="card-body"><div class="card-title">Loading&hellip;</div><div class="card-price">$00.00</div></div></div>
+          <div class="card card-skeleton"><div class="card-media"></div><div class="card-body"><div class="card-title">Loading&hellip;</div><div class="card-price">$00.00</div></div></div>
+          <div class="card card-skeleton"><div class="card-media"></div><div class="card-body"><div class="card-title">Loading&hellip;</div><div class="card-price">$00.00</div></div></div>
+        </div>
+        <p id="shopError" class="error-banner" hidden>The live catalog couldn't be reached just now. <a href="https://www.etsy.com/shop/WildBoneWorkers" target="_blank" rel="noopener">Browse directly on Etsy instead</a>.</p>
+        <div class="empty-state" id="emptyState" hidden>No specimens match those filters. <a href="/shop.html">Clear filters</a>.</div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>Wild Bone Workers</h4>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/shop.html">Shop</a></li>
+          <li><a href="/about.html">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Help</h4>
+        <ul>
+          <li><a href="/shipping.html">Shipping</a></li>
+          <li><a href="/returns.html">Returns &amp; exchanges</a></li>
+          <li><a href="https://www.etsy.com/shop/WildBoneWorkers" target="_blank" rel="noopener">Contact on Etsy</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Specimens</h4>
+        <ul id="footerCategoryList"><li><a href="/shop.html">Browse all</a></li></ul>
+      </div>
+      <div>
+        <h4>Checkout</h4>
+        <p style="font-size:0.9rem;color:#55503f;max-width:26ch;">Every order is placed and paid for securely on Etsy. We only display the live catalog here.</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; <span id="footerYear"></span> Wild Bone Workers. Specimens sold via Etsy.</span>
+      <span>Ethically sourced &middot; Not from threatened or endangered species</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js" defer></script>
+<script src="js/shop.js" defer></script>
+</body>
+</html>

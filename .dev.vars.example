@@ -1,3 +1,12 @@
-ETSY_KEYSTRING=YOUR_ETSY_KEYSTRING
-ETSY_SHARED_SECRET=YOUR_ETSY_SHARED_SECRET
-ETSY_REFRESH_TOKEN=YOUR_ETSY_REFRESH_TOKEN
+# Copy this file to `.dev.vars` for local `wrangler pages dev` testing.
+# `.dev.vars` is gitignored — never commit real credentials.
+# In production (Cloudflare Pages), these are set with `wrangler pages secret put`
+# instead of a file — see README.md.
+
+ETSY_API_KEY=your_etsy_keystring_here
+
+# Optional — only needed if you later add OAuth-only scopes (draft listings,
+# shop-owner-only fields). Read-only display of active listings does not
+# require these.
+ETSY_SHARED_SECRET=
+ETSY_REFRESH_TOKEN=

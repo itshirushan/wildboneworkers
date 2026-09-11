@@ -1,0 +1,16 @@
+# Wrangler configuration for Cloudflare Pages.
+# This file holds NO secrets. API keys/tokens are set with:
+#   wrangler pages secret put ETSY_API_KEY
+#   wrangler pages secret put ETSY_SHARED_SECRET   (optional, only for OAuth)
+#   wrangler pages secret put ETSY_REFRESH_TOKEN   (optional, only for OAuth)
+# See README.md for the full setup walkthrough.
+
+name = "wildboneworkers"
+pages_build_output_dir = "public"
+compatibility_date = "2025-01-01"
+compatibility_flags = ["nodejs_compat"]
+
+# Non-secret variables are fine to keep here. There are currently none —
+# the Etsy shop id lives in functions/_lib/config.js since it's a public
+# identifier, not a credential.
+[vars]
