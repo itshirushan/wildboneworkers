@@ -1,6 +1,6 @@
 img { max-width: 100%; height: auto; }
 ﻿/* ============================================================
-   WILDBONEWORKERS â€” Polished Amazon-style UI
+   WILDBONEWORKERS — Polished Amazon-style UI
    ============================================================ */
 
 /* Google Fonts */
@@ -471,7 +471,7 @@ nav a:hover {
 }
 
 .product-description ul li::before {
-    content: 'âœ¦';
+    content: '✦';
     position: absolute;
     left: 0;
     color: #febd69;
@@ -1064,5 +1064,94 @@ footer {
     }
     .hero-price {
         font-size: 28px;
+    }
+}
+
+/* ============================================================
+   HEADER & LAYOUT BUG FIXES
+   ============================================================ */
+
+/* Desktop Header Fixes */
+@media (min-width: 769px) {
+    header {
+        flex-wrap: nowrap !important;
+        padding: 12px 30px !important;
+        justify-content: center !important;
+    }
+    .logo-section {
+        flex-shrink: 0 !important;
+    }
+    .search-bar {
+        max-width: 600px !important;
+        margin: 0 40px !important;
+    }
+    .shop-links {
+        flex-shrink: 0 !important;
+    }
+}
+
+/* Mobile Fixes */
+@media (max-width: 768px) {
+    .deliver-to {
+        white-space: nowrap !important;
+        font-size: 11px !important;
+    }
+    .deliver-to span {
+        display: inline !important;
+    }
+    /* Fix the massive related products grid on mobile */
+    .container > div[style*="grid-template-columns"] {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 12px !important;
+    }
+    .search-bar {
+        margin: 10px 0 5px 0 !important;
+    }
+    .shop-btn {
+        padding: 10px !important;
+        font-size: 14px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        font-size: 15px !important;
+    }
+    .deliver-to {
+        font-size: 10px !important;
+    }
+    /* Reduce margins around related products section so it doesn't leave huge gaps */
+    .container[style*="margin-top: 40px"] {
+        margin-top: 20px !important;
+        padding-top: 20px !important;
+    }
+}
+
+/* ============================================================
+   FINAL GLITCH FIXES
+   ============================================================ */
+   
+/* Prevent Button Overflow */
+.btn-primary {
+    box-sizing: border-box !important;
+    max-width: 100% !important;
+}
+
+/* Fix Header Overflow on Mobile */
+@media (max-width: 768px) {
+    .deliver-to {
+        white-space: normal !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .deliver-to {
+        display: none !important; /* Hide on small screens to prevent layout breaking, info is already in the top banner */
+    }
+    
+    /* Ensure the search bar takes full width properly */
+    .search-bar {
+        width: 100% !important;
+        min-width: 0 !important;
     }
 }
