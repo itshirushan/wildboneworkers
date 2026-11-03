@@ -1,0 +1,10 @@
+// Cloudflare Workers: serve this repository as a static website.
+{
+  "name": "wildboneworkers",
+  "compatibility_date": "2026-11-01",
+  "assets": {
+    "directory": ".",
+    "not_found_handling": "404-page",
+    "html_handling": "auto-trailing-slash"
+  }
+}
